@@ -15,7 +15,7 @@ use App\Http\Controllers\login_con;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 Route::POST("login",[login_con::class,"print"]);
 
