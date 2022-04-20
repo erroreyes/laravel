@@ -25,6 +25,7 @@
                     <a href="home" class="btn  btn-md m-1 text-white" id="first">Home</a>
                     <a  class="btn btn-md m-1 text-white">Gallary</a>
                     <a href="login" class="btn btn-md m-1 text-white">login</a>
+                    <a href="register" class="btn btn-md m-1 text-white">registration</a>
                 </li>
             </ul> 
         </nav>

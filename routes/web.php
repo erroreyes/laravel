@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\login_con;
+use App\Http\Controllers\register_con;
+use Illuminate\Routing\Route as RoutingRoute;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +20,7 @@ Route::get('/', function () {
     return view('home');
 });
 Route::POST("login",[login_con::class,"print"]);
-
+Route::POST("register",[register_con::class,"display"]);
 Route::view("login","login");
 Route::view("home","home"); 
+Route::view("register","register");
