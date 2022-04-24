@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{asset('css/home.css')}}">
     <title>Document</title>
 </head>
 <style>
@@ -17,8 +19,8 @@
 
     @include("header")
     <div class="container w-75 bg-dark">
-        <div class="row  justify-content-center p-3">
-            <h1 class="col col-md-6">Registration Form</h1>
+        <div class="row  justify-content-center p-3 m-5">
+            <h1 class="col col-md-5">Registration Form</h1>
         </div>
         <form action="register" method="post" enctype="multipart/form-data">
             @csrf
@@ -29,14 +31,14 @@
             @endif -->
             <div class="form-row ">
                 <div class="form-group col-sm-6">
-                    <label>Fname :</label>
-                    <input type="text" name="fname" class="form-control">
-                    <span class="text-white">@error('fname'){{$message}} @enderror</span>
+                    <label>Firstname :</label>
+                    <input type="text" name="Firstname" class="form-control">
+                    <span class="text-white">@error('Firstname'){{$message}} @enderror</span>
                 </div>
                 <div class="form-group col-md-6">
-                    <label>Lname :</label>
-                    <input type="text" name="lname" class="form-control">
-                    <span class="text-white">@error('lname'){{$message}} @enderror</span>
+                    <label>Lastname :</label>
+                    <input type="text" name="Lastname" class="form-control">
+                    <span class="text-white">@error('Lastname'){{$message}} @enderror</span>
                 </div>
             </div>
             <div class="form-row justify-content-center">
@@ -44,15 +46,18 @@
                     <label>Gender :</label>
                     <input type="radio" name="gender" value="male"> Male
                     <input type="radio" name="gender" value="female"> Female
+                    <span>@error('gender'){{$message}} @enderror</span>
                 </div>
                 <div class="form-group col-md-4">
                     <label>DOJ :</label>
-                    <input type="date" name="doj" class="form-control">
+                    <input type="date" name="date" class="form-control">
+                    <span>@error('date'){{$message}} @enderror</span>
                 </div>
 
                 <div class="form-group col-md-4">
                     <label>Age :</label>
                     <input type="text" name="age" class="form-control">
+                    <span>@error('age'){{$message}} @enderror</span>
                 </div>
 
 
@@ -61,34 +66,38 @@
                 <div class="form-group col-md-4">
                     <label>Salary :</label>
                     <input type="text" name="salary" class="form-control">
+                    <span>@error('salary'){{$message}} @enderror</span>
                 </div>
                 <div class="form-group col-md-4">
                     <label>Department :</label>
-                    <select name="dept" class="form-control">
+                    <select name="Department" class="form-control">
                         <option value="sale">Sale</option>
                         <option value="purchase">Purchase</option>
                         <option value="red">RED</option>
                         <option value="marketing">Marketing</option>
                     </select>
+                    <span>@error('department'){{$message}} @enderror</span>
                 </div>
                 <div class="form-group col-md-4">
                     <label>Image :</label>
                     <div class="custom-file">
 
-                        <input type="file" id="customfile" class="custom-file-input" name="file">
+                        <input type="file" id="customfile" class="custom-file-input" name="Imagefile">
                         <label class="custom-file-label" id="customfile">choose image file</label>
                     </div>
                 </div>
+                <span>@error('Imagefile'){{$message}} @enderror</span>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label>Email :</label>
                     <input type="text" name="email" class="form-control">
+                    <span>@error('email'){{$message}} @enderror</span>
                 </div>
                 <div class="form-group col-md-3">
                     <label>Password :</label>
-                    <input type="password" name="pass" class="form-control">
-                    <span class="text-white">@error('pass'){{$message}} @enderror</span>
+                    <input type="password" name="password" class="form-control">
+                    <span class="text-white">@error('password'){{$message}} @enderror</span>
                 </div>
                 <div class="form-group col-md-3">
                     <label>Confirm Password :</label>
@@ -100,11 +109,11 @@
                 <div class="form-group col-md-2 ">
                     <label>Hobby:</label>
                 </div>
-                <div class="form-group col-md-6">
-                    <input class="form-check-input" type="checkbox" name="hobby[]" value="football"> Football <br>
-                    <input class="form-check-input" type="checkbox" name="hobby[]" value="Cricket"> Cricket <br>
-                    <input class="form-check-input" type="checkbox" name="hobby[]" value="Dancing"> Dancing <br>
-                    <input class="form-check-input" type="checkbox" name="hobby[]" value="Singing"> Singing
+                <div class="form-group col-md-6">   
+                    <input class="form-check-input" type="checkbox" name="checkbox" value="football"> Football <br>
+                    <input class="form-check-input" type="checkbox" name="checkbox" value="Cricket"> Cricket <br>
+                    <input class="form-check-input" type="checkbox" name="checkbox" value="Dancing"> Dancing <br>
+                    <input class="form-check-input" type="checkbox" name="checkbox" value="Singing"> Singing
                 </div>
                 <div class="form-group col-md-4  "><br><br>
                     <input type="submit" value="Submit" name="submit" class="btn btn-info">
