@@ -9,17 +9,18 @@ class register_con extends Controller
     function display(Request $dis)
     {
         $dis->validate([
-            'fname' => 'required', 
-            'lname' => 'required',
-            'pass' => 'required | min:8 | max:12',
+            'Firstname' => 'required | max:255', 
+            'Lastname' => 'required | max:255',
+            'password' => 'required | min:8 | max:12 | confirmed',
             'date'=>'required',
+            'gender'=>'required',
             'age'=>'required',
             'salary'=>'required',
-            'dept'=>'required',
-            'file' =>'required',
-            'email'=>'required',
-            'cpass'=>'required'
+            'department'=>'required',
+            'Imagefile' =>'required | image',
+            'email'=>'required | email | unique:users',
+            'checkbox'=>'required_all_'
             ]);
-        return $dis->input('fname', 'lname', 'pass');
+        return $dis->input();
     }
 }

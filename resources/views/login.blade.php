@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,29 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{asset('css/home.css')}}">
     <title>Document</title>
+    <style>
+        #txt {
+            color: salmon;
+        }
+        .nav-item a:hover{
+            background-color:orange;
+            transition: all 0.6s;
+        }
+
+    </style>
 </head>
 
 <body>
     @include("header")
     <div class=" p-5"></div>
     <div class="container w-50 bg-dark  h-100 p-2" id="txt">
+
         <div class="row  justify-content-center p-3">
             <h1 class="col col-md-4">login page</h1>
         </div>
-        
+
         <form action="login" method="POST">
             @csrf
             <div class="form-row">
                 <div class="form-group col-sm-12">
                     <label>Username :</label>
-                    <input type="text" name="userid" class="form-control">
+                    <input type="text" name="username" class="form-control">
+                    <span class="text-white">@error('username'){{$message}} @enderror</span>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-sm-12">
                     <label>Password :</label>
                     <input type="password" name="password" class="form-control">
+                    <span class="text-white">@error('password'){{$message}} @enderror</span>
                 </div>
             </div>
             <div class="form-row">

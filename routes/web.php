@@ -19,7 +19,7 @@ use Illuminate\Routing\Route as RoutingRoute;
 Route::get('/', function () {
     return view('home');
 });
-Route::POST("login",[login_con::class,"print"]);
+Route::POST("login",[login_con::class,"declare"]);
 Route::POST("register",[register_con::class,"display"]);
 Route::view("login","login");
 Route::view("home","home"); 
