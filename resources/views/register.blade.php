@@ -32,12 +32,12 @@
             <div class="form-row ">
                 <div class="form-group col-sm-6">
                     <label>Firstname :</label>
-                    <input type="text" name="Firstname" class="form-control">
+                    <input type="text" name="Firstname" class="form-control" value="{{old('Firstname')}}">
                     <span class="text-white">@error('Firstname'){{$message}} @enderror</span>
                 </div>
                 <div class="form-group col-md-6">
                     <label>Lastname :</label>
-                    <input type="text" name="Lastname" class="form-control">
+                    <input type="text" name="Lastname" class="form-control" value="{{old('Lastname')}}">
                     <span class="text-white">@error('Lastname'){{$message}} @enderror</span>
                 </div>
             </div>
@@ -50,13 +50,13 @@
                 </div>
                 <div class="form-group col-md-4">
                     <label>DOJ :</label>
-                    <input type="date" name="date" class="form-control">
+                    <input type="date" name="date" class="form-control" value="{{old('date')}}">
                     <span>@error('date'){{$message}} @enderror</span>
                 </div>
 
                 <div class="form-group col-md-4">
                     <label>Age :</label>
-                    <input type="text" name="age" class="form-control">
+                    <input type="text" name="age" class="form-control" value="{{old('age')}}">
                     <span>@error('age'){{$message}} @enderror</span>
                 </div>
 
@@ -65,7 +65,7 @@
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label>Salary :</label>
-                    <input type="text" name="salary" class="form-control">
+                    <input type="text" name="salary" class="form-control" value="{{old('salary')}}">
                     <span>@error('salary'){{$message}} @enderror</span>
                 </div>
                 <div class="form-group col-md-4">
@@ -82,7 +82,7 @@
                     <label>Image :</label>
                     <div class="custom-file">
 
-                        <input type="file" id="customfile" class="custom-file-input" name="Imagefile">
+                        <input type="file" id="customfile" class="custom-file-input" name="Imagefile" value="{{old('Imagefile')}}">
                         <label class="custom-file-label" id="customfile">choose image file</label>
                     </div>
                 </div>
@@ -91,12 +91,12 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label>Email :</label>
-                    <input type="text" name="email" class="form-control">
+                    <input type="text" name="email" class="form-control"value="{{old('password')}}">
                     <span>@error('email'){{$message}} @enderror</span>
                 </div>
                 <div class="form-group col-md-3">
                     <label>Password :</label>
-                    <input type="password" name="password" class="form-control">
+                    <input type="password" name="password" class="form-control" value="{{old('confirm')}}">
                     <span class="text-white">@error('password'){{$message}} @enderror</span>
                 </div>
                 <div class="form-group col-md-3">
@@ -113,7 +113,8 @@
                     <input class="form-check-input" type="checkbox" name="checkbox" value="football"> Football <br>
                     <input class="form-check-input" type="checkbox" name="checkbox" value="Cricket"> Cricket <br>
                     <input class="form-check-input" type="checkbox" name="checkbox" value="Dancing"> Dancing <br>
-                    <input class="form-check-input" type="checkbox" name="checkbox" value="Singing"> Singing
+                    <input class="form-check-input" type="checkbox" name="checkbox" value="Singing"> Singing <br>
+                    <span>@error('checkbox'){{$message}} @enderror</span>
                 </div>
                 <div class="form-group col-md-4  "><br><br>
                     <input type="submit" value="Submit" name="submit" class="btn btn-info">

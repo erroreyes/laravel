@@ -19,8 +19,14 @@ use Illuminate\Routing\Route as RoutingRoute;
 Route::get('/', function () {
     return view('home');
 });
-Route::POST("login",[login_con::class,"declare"]);
 Route::POST("register",[register_con::class,"display"]);
+Route::view("register","register");
+Route::POST("login",[login_con::class,"declare"]);
 Route::view("login","login");
 Route::view("home","home"); 
-Route::view("register","register");
+Route::view("dashboard","dashboard");
+Route::view("gallary","gallary");
+Route::group(['middleware'=>['group']],function(){
+    Route::view('dashboard','dashboard');
+    Route::view('login','login');
+});

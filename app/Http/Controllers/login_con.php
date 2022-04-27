@@ -10,5 +10,6 @@ class login_con extends Controller
         
         $print->validate(['username'=>'required','password'=>'required']);
         return $print->input();
+        
     }
 }
