@@ -16,7 +16,7 @@ class group_route
      */
     public function handle(Request $request, Closure $next)
     {
-        if ($request->password && $request->password!==012) {
+        if ($request->password && $request->password!=='012') {
             return redirect('dashboard');
         }
         return $next($request);

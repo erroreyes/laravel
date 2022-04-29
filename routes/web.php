@@ -24,9 +24,11 @@ Route::view("register","register");
 Route::POST("login",[login_con::class,"declare"]);
 Route::view("login","login");
 Route::view("home","home"); 
-Route::view("dashboard","dashboard");
+Route::view("dashboard","files.dashboard");
 Route::view("gallary","gallary");
+
+#group route
 Route::group(['middleware'=>['group']],function(){
-    Route::view('dashboard','dashboard');
+    Route::view('dashboard','files.dashboard');
     Route::view('login','login');
 });

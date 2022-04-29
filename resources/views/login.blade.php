@@ -10,20 +10,24 @@
     <title>Document</title>
     <style>
         #txt {
-            color: salmon;
+            color: orange;
         }
         .nav-item a:hover{
             background-color:orange;
             transition: all 0.6s;
         }
+        .container{
+            background-color:rgba(0, 0, 0, 0.2);
+            border: 1px solid black;
+        }
 
     </style>
 </head>
 
-<body>
+<body id="back">
     @include("header")
     <div class=" p-5"></div>
-    <div class="container w-50 bg-dark  h-100 p-2" id="txt">
+    <div class="container w-50   p-2 " id="txt">
 
         <div class="row  justify-content-center p-3">
             <h1 class="col col-md-4">login page</h1>

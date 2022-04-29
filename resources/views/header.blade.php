@@ -18,6 +18,7 @@
                     <a href="gallary" class="btn btn-md m-1">Gallary</a>
                     <a href="login" class="btn btn-md m-1 ">login</a>
                     <a href="register" class="btn btn-md m-1 ">registration</a>
+                    <a href="dashboard" class="btn btn-md m-1 ">dashboard</a>
                 </li>
             </ul> 
         </nav>

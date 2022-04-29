@@ -10,15 +10,20 @@
     <title>Document</title>
 </head>
 <style>
-    .container {
-        color: salmon;
-    }
-</style>
+        #txt {
+            color:orange;
+        }
+        .nav-item a:hover{
+            background-color:orange;
+            transition: all 0.6s;
+        }
+
+    </style>
 
 <body>
 
     @include("header")
-    <div class="container w-75 bg-dark">
+    <div class="container w-75 bg-dark" id="txt">
         <div class="row  justify-content-center p-3 m-5">
             <h1 class="col col-md-5">Registration Form</h1>
         </div>
