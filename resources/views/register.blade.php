@@ -10,15 +10,15 @@
     <title>Document</title>
 </head>
 <style>
-        #txt {
-            color:orange;
-        }
-        .nav-item a:hover{
-            background-color:orange;
-            transition: all 0.6s;
-        }
+    #txt {
+        color: orange;
+    }
 
-    </style>
+    .nav-item a:hover {
+        background-color: orange;
+        transition: all 0.6s;
+    }
+</style>
 
 <body>
 
@@ -27,7 +27,7 @@
         <div class="row  justify-content-center p-3 m-5">
             <h1 class="col col-md-5">Registration Form</h1>
         </div>
-        <form action="register" method="post" enctype="multipart/form-data">
+        <form action="register" method="POST" enctype="multipart/form-data">
             @csrf
             <!-- @if($errors->any())
             @foreach($errors->all() as $err)
@@ -83,7 +83,8 @@
                     </select>
                     <span>@error('department'){{$message}} @enderror</span>
                 </div>
-                <div class="form-group col-md-4">
+
+                <!-- <div class="form-group col-md-4">   image 
                     <label>Image :</label>
                     <div class="custom-file">
 
@@ -91,22 +92,22 @@
                         <label class="custom-file-label" id="customfile">choose image file</label>
                     </div>
                 </div>
-                <span>@error('Imagefile'){{$message}} @enderror</span>
+                <span>@error('Imagefile'){{$message}} @enderror</span>-->
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label>Email :</label>
-                    <input type="text" name="email" class="form-control"value="{{old('password')}}">
+                    <input type="text" name="email" class="form-control" value="{{old('email')}}">
                     <span>@error('email'){{$message}} @enderror</span>
                 </div>
                 <div class="form-group col-md-3">
                     <label>Password :</label>
-                    <input type="password" name="password" class="form-control" value="{{old('confirm')}}">
+                    <input type="password" name="passcode" class="form-control" value="{{old('passcode')}}">
                     <span class="text-white">@error('password'){{$message}} @enderror</span>
                 </div>
                 <div class="form-group col-md-3">
                     <label>Confirm Password :</label>
-                    <input type="password" name="confirm" class="form-control">
+                    <input type="password" name="confirm" class="form-control" value="{{old('confirm')}}">
 
                 </div>
             </div>
@@ -114,7 +115,7 @@
                 <div class="form-group col-md-2 ">
                     <label>Hobby:</label>
                 </div>
-                <div class="form-group col-md-6">   
+                <div class="form-group col-md-6">
                     <input class="form-check-input" type="checkbox" name="checkbox" value="football"> Football <br>
                     <input class="form-check-input" type="checkbox" name="checkbox" value="Cricket"> Cricket <br>
                     <input class="form-check-input" type="checkbox" name="checkbox" value="Dancing"> Dancing <br>
@@ -122,7 +123,7 @@
                     <span>@error('checkbox'){{$message}} @enderror</span>
                 </div>
                 <div class="form-group col-md-4  "><br><br>
-                    <input type="submit" value="Submit" name="submit" class="btn btn-info">
+                    <input type="submit" value="Submit" class="btn btn-info">
                     <a href="register" class="btn btn-danger ">reset</a><br>
                     Already have an account <a href="#">Login here</a>
                 </div>

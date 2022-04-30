@@ -22,3 +22,4 @@ class group_route
         return $next($request);
     }
 }
+
