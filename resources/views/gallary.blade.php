@@ -11,10 +11,10 @@
             background-color:orange;
             transition: all 0.6s;
         }
-
+      
     </style>
 </head>
-<body>
+<body class="bg-dark">
     @include('header')
         <div class="container-fluid  p-5">
             <div class="row justify-content-center">

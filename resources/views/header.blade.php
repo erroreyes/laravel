@@ -7,17 +7,22 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <title>Document</title>
     <script type="text/javascript" src="jquery.js"></script>
-    
+    <style>
+        .nav-item a{
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <div class="container-fluid">
         <nav class="navbar expand-sm  p-1">
             <ul class="nav">
-                <li class="nav-item">
-                    <a href="home" class="btn  btn-md m-1" id="first">Home</a>
+                <li class="nav-item" id="txt_color">
+                    <a href="home" class="btn  btn-md m-1 " id="first">Home</a>
                     <a href="gallary" class="btn btn-md m-1">Gallary</a>
                     <a href="login" class="btn btn-md m-1 ">login</a>
                     <a href="register" class="btn btn-md m-1 ">registration</a>
+                    <a href="dashboard" class="btn btn-md m-1 ">Dashboard</a>
                 </li>
             </ul> 
         </nav>

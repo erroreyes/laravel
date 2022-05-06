@@ -15,9 +15,10 @@
         .nav-item a:hover{
             background-color:orange;
             transition: all 0.6s;
+            color: black;
         }
         .container{
-            background-color:rgba(0, 0, 0, 0.2);
+            background-color:rgba(0, 0, 0, 0.6);
             border: 1px solid black;
         }
 
@@ -52,8 +53,8 @@
             <div class="form-row">
                 <div class="form-group col-sm-12">
                     <input type="submit" name="submit" value="Signin" class="btn btn-info">
-                    <a href="#" class="btn btn-danger">Cancel</a><br>
-                    Don't have an account <a href="#">Register</a>
+                    <a href="#" class="btn btn-danger">Cancel</a><br><br>
+                    Don't have an account <a href="register"  class="text-white" style="text-decoration: none;">Register here</a>
                 </div>
         </form>
     </div>

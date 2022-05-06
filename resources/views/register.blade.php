@@ -17,13 +17,19 @@
     .nav-item a:hover {
         background-color: orange;
         transition: all 0.6s;
+        color: black;
+    }
+
+    .container {
+        background-color: rgba(0, 0, 0, 0.6);
+        border: 1px solid black;
     }
 </style>
 
-<body>
+<body id="back">
 
     @include("header")
-    <div class="container w-75 bg-dark" id="txt">
+    <div class="container w-75 " id="txt">
         <div class="row  justify-content-center p-3 m-5">
             <h1 class="col col-md-5">Registration Form</h1>
         </div>
@@ -50,19 +56,20 @@
                 <div class="form-group col-md-4"><br>
                     <label>Gender :</label>
                     <input type="radio" name="gender" value="male"> Male
-                    <input type="radio" name="gender" value="female"> Female
-                    <span>@error('gender'){{$message}} @enderror</span>
+                    <input type="radio" name="gender" value="female"> Female <br>
+
+                    <span class="text-white">@error('gender'){{$message}} @enderror</span>
                 </div>
                 <div class="form-group col-md-4">
                     <label>DOJ :</label>
                     <input type="date" name="date" class="form-control" value="{{old('date')}}">
-                    <span>@error('date'){{$message}} @enderror</span>
+                    <span class="text-white">@error('date'){{$message}} @enderror</span>
                 </div>
 
                 <div class="form-group col-md-4">
                     <label>Age :</label>
                     <input type="text" name="age" class="form-control" value="{{old('age')}}">
-                    <span>@error('age'){{$message}} @enderror</span>
+                    <span class="text-white">@error('age'){{$message}} @enderror</span>
                 </div>
 
 
@@ -71,45 +78,48 @@
                 <div class="form-group col-md-4">
                     <label>Salary :</label>
                     <input type="text" name="salary" class="form-control" value="{{old('salary')}}">
-                    <span>@error('salary'){{$message}} @enderror</span>
+                    <span class="text-white">@error('salary'){{$message}} @enderror</span>
                 </div>
                 <div class="form-group col-md-4">
                     <label>Department :</label>
-                    <select name="Department" class="form-control">
+                    <select name="department" class="form-control">
+                        <option value="" selected disabled>--choose department</option>
                         <option value="sale">Sale</option>
                         <option value="purchase">Purchase</option>
                         <option value="red">RED</option>
                         <option value="marketing">Marketing</option>
                     </select>
-                    <span>@error('department'){{$message}} @enderror</span>
+                    <span class="text-white">@error('department'){{$message}} @enderror</span>
                 </div>
 
-                <!-- <div class="form-group col-md-4">   image 
+                <div class="form-group col-md-4">
                     <label>Image :</label>
                     <div class="custom-file">
 
                         <input type="file" id="customfile" class="custom-file-input" name="Imagefile" value="{{old('Imagefile')}}">
                         <label class="custom-file-label" id="customfile">choose image file</label>
                     </div>
+                    <span class="text-white">@error('Imagefile'){{$message}} @enderror</span>
                 </div>
-                <span>@error('Imagefile'){{$message}} @enderror</span>-->
+
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label>Email :</label>
                     <input type="text" name="email" class="form-control" value="{{old('email')}}">
-                    <span>@error('email'){{$message}} @enderror</span>
+                    <span class="text-white">@error('email'){{$message}} @enderror</span>
                 </div>
                 <div class="form-group col-md-3">
                     <label>Password :</label>
                     <input type="password" name="passcode" class="form-control" value="{{old('passcode')}}">
-                    <span class="text-white">@error('password'){{$message}} @enderror</span>
+                    <span class="text-white">@error('passcode'){{$message}} @enderror</span>
                 </div>
                 <div class="form-group col-md-3">
                     <label>Confirm Password :</label>
                     <input type="password" name="confirm" class="form-control" value="{{old('confirm')}}">
-
+                    <span class="text-white">@error('confirm'){{$message}} @enderror</span>
                 </div>
+
             </div>
             <div class="form-row">
                 <div class="form-group col-md-2 ">
@@ -120,12 +130,12 @@
                     <input class="form-check-input" type="checkbox" name="checkbox" value="Cricket"> Cricket <br>
                     <input class="form-check-input" type="checkbox" name="checkbox" value="Dancing"> Dancing <br>
                     <input class="form-check-input" type="checkbox" name="checkbox" value="Singing"> Singing <br>
-                    <span>@error('checkbox'){{$message}} @enderror</span>
+                    <span class="text-white">@error('checkbox'){{$message}} @enderror</span>
                 </div>
                 <div class="form-group col-md-4  "><br><br>
                     <input type="submit" value="Submit" class="btn btn-info">
-                    <a href="register" class="btn btn-danger ">reset</a><br>
-                    Already have an account <a href="#">Login here</a>
+                    <a href="register" class="btn btn-danger ">reset</a><br><br>
+                    Already have an account <a href="login" class="text-white" style="text-decoration: none;">Login here</a>
                 </div>
             </div>
 
