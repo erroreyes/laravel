@@ -36,17 +36,18 @@
         <table class="table table-striped p-5">
             <tr>
                 <th>Id</th>
-                <th>Name</th>
-                <th>Salary</th>
-                <th>Age</th>
+                <th>Email</th>
+                <th>F_name</th>
+                <th>L_name</th>
+                <th>Avtar</th>
             </tr>
             @foreach($data as $info)
             <tr>
-                <td>{{$info->id}} </td>
-                <td>{{$info->email}}</td>
-                <td>{{$info->first_name}}</td>
-                <td>{{$info->last_name}} </td>
-                <td><img src="{{$info->avtar}}" alt="picture"></td>
+                <td>{{$info['id']}} </td>
+                <td>{{$info['email']}}</td>
+                <td>{{$info['first_name']}}</td>
+                <td>{{$info['last_name']}} </td>
+                <td><img src="{{$info['avatar']}}" alt="picture"></td>
             </tr>
             @endforeach
         </table>

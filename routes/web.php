@@ -4,8 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\login_con;
 use App\Http\Controllers\register_con;
 use App\Http\Controllers\display;
+use App\Http\Controllers\http_request;
 use GuzzleHttp\Middleware;
 use Illuminate\Routing\Route as RoutingRoute;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +28,11 @@ Route::view("register","register");
 Route::POST("login",[login_con::class,"declare"]);
 Route::view("login","login");
 Route::view("home","home"); 
-Route::get("show_data",[display::class,"tbl"]);
+
+#display table data using controller
+
+#Route::get("dashboard",[display::class,"tbl"]);
+Route::get("api",[http_request::class,"check"]);
 Route::view("gallary","gallary");
 
 #group middleware
