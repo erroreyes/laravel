@@ -30,10 +30,9 @@
 <body id="data"  class="bg-dark">
     @include("header")
     <!-- {{count($data)}} -->
-    <div class="p-5 "></div>
-    <div class="container w-50 w-100 w-75 w-25 p-5">
+    <div class="container w-100 w-75 w-50 w-25 ">
        
-        <table class="table table-striped p-5">
+        <table class="table table-striped">
             <tr>
                 <th>Id</th>
                 <th>Name</th>

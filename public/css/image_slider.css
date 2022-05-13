@@ -1,0 +1,29 @@
+
+.slider-container{
+    position: relative;
+    height: 350px;
+    width: 450px;
+    overflow: hidden;
+}
+.image-slider{
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+.box{
+    position: absolute;
+    top: 50%;
+    color: white;
+    font-size: 30px;
+    opacity: 0.5;
+    transform:translateY(-50%);
+    cursor: pointer;
+}
+.box.prev{
+    left:10px;
+}
+.box.next{
+    right:10px;
+}
+.box:hover{
+    opacity: 1;
+}

@@ -32,7 +32,7 @@ Route::view("home","home");
 #display table data using controller
 
 #Route::get("dashboard",[display::class,"tbl"]);
-Route::get("api",[http_request::class,"check"]);
+Route::get("dashboard",[http_request::class,"check"]);
 Route::view("gallary","gallary");
 
 #group middleware

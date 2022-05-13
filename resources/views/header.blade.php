@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,15 +9,17 @@
     <title>Document</title>
     <script type="text/javascript" src="jquery.js"></script>
     <style>
-        .nav-item a{
+       
+        .nav-item a {
             color: white;
         }
     </style>
 </head>
+
 <body>
     <div class="container-fluid">
-        <nav class="navbar expand-sm  p-1">
-            <ul class="nav">
+        <nav class=" p-1">
+            <ul class="nav justify-content-end" >
                 <li class="nav-item" id="txt_color">
                     <a href="home" class="btn  btn-md m-1 " id="first">Home</a>
                     <a href="gallary" class="btn btn-md m-1">Gallary</a>
@@ -24,8 +27,9 @@
                     <a href="register" class="btn btn-md m-1 ">registration</a>
                     <a href="dashboard" class="btn btn-md m-1 ">Dashboard</a>
                 </li>
-            </ul> 
+            </ul>
         </nav>
     </div>
 </body>
+
 </html>
