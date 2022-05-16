@@ -25,9 +25,20 @@ Route::get('/', function () {
 });
 Route::post("register",[register_con::class,"display"]);
 Route::view("register","register");
-Route::POST("login",[login_con::class,"declare"]);
+Route::put("login_check",[login_con::class,"login_check"]);
 Route::view("login","login");
 Route::view("home","home"); 
+Route::view("profile","profile");
+
+
+
+Route::get("/logout",function (){
+    if (session()->has('user')) {
+        session()->pull('user');
+    }
+    redirect('profile');
+});
+
 
 #display table data using controller
 
@@ -37,7 +48,7 @@ Route::view("gallary","gallary");
 
 #group middleware
 // Route::group(['middleware'=>['group']],function(){
-//     Route::view('dashboard','files.dashboard');
+//     Route::view('home','files.dashboard');
 //     Route::view('login','login');
 // });
 

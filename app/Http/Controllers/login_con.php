@@ -6,10 +6,11 @@ use Illuminate\Http\Request;
 
 class login_con extends Controller
 {
-    function declare(Request $print){
+    function login_check(Request $print){
         
         $print->validate(['username'=>'required','password'=>'required']);
-        return $print->input();
-        
+        $value=$print->input();
+        $print->session()->put('user',$value['username']);
+        return redirect('profile');
     }
 }

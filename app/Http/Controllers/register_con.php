@@ -14,7 +14,7 @@ class register_con extends Controller
             'Lastname' => 'required | max:255 ',
             'gender'=>'required',
             'date'=>'required',
-            'age'=>'required',
+            'age'=>'required | numeric',
             'salary'=>'required | numeric',
             'department'=>'required',
             // 'Imagefile'=>'required',

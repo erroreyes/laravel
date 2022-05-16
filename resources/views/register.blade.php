@@ -31,7 +31,7 @@
     @include("header")
     <div class="container w-75 " id="txt">
         <div class="row  justify-content-center p-3 m-5">
-            <h1 class="col col-md-5">Registration Form</h1>
+            <h1 class="col col-12 text-center">Registration Form</h1>
         </div>
         <form action="register" method="POST" enctype="multipart/form-data">
             @csrf

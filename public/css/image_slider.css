@@ -1,13 +1,18 @@
 
 .slider-container{
     position: relative;
-    height: 350px;
-    width: 450px;
+    height: 400px;
+    width: 550px;
     overflow: hidden;
 }
-.image-slider{
+.image-container{
     display: flex;
     transition: transform 0.4s ease-in-out;
+    position: absolute;
+}
+.image-container img {
+    height: 400px;
+    width: 550px;
 }
 .box{
     position: absolute;
@@ -15,7 +20,7 @@
     color: white;
     font-size: 30px;
     opacity: 0.5;
-    transform:translateY(-50%);
+    transform:translateY(-80%);
     cursor: pointer;
 }
 .box.prev{

@@ -34,7 +34,8 @@
             <h1 class="col col-md-4">login page</h1>
         </div>
 
-        <form action="login" method="POST">
+        <form action="login_check" method="POST">
+            {{method_field('PUT')}}
             @csrf
             <div class="form-row">
                 <div class="form-group col-sm-12">

@@ -20,9 +20,11 @@
     @include('header')
             <div class="slider-container">
                 <div class="image-container">
-                    <img src="{{asset('images/food.jpg')}}" alt="food" height="350px" width="450px">
-                    <img src="{{asset('images/food1.jpg')}}" alt="food" height="350px" width="450px">
-                    <img src="{{asset('images/food2.jpg')}}" alt="food" height="350px" width="450px">
+                    <img src="{{asset('images/food.jpg')}}"  ">
+                    <img src="{{asset('images/food1.jpg')}}"  " >
+                    <img src="{{asset('images/food2.jpg')}}"  ">
+                    <img src="{{asset('images/food3.jpg')}}"  ">
+                    <img src="{{asset('images/food4.jpg')}}"  "> 
                 </div>
                 <i class="fas fa-angle-double-left box prev"></i>
                 <i class="fas fa-angle-double-right box next"></i>
