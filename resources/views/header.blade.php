@@ -23,9 +23,9 @@
                 <li class="nav-item" id="txt_color">
                     <a href="home" class="btn  btn-md m-1 " id="first">Home</a>
                     <a href="gallary" class="btn btn-md m-1">Gallary</a>
-                    <a href="login" class="btn btn-md m-1 ">login</a>
-                    <a href="register" class="btn btn-md m-1 ">registration</a>
-                    <a href="dashboard" class="btn btn-md m-1 ">Dashboard</a>
+                    <a href="login" class="btn btn-md m-1 ">Login</a>
+                    <a href="register" class="btn btn-md m-1 ">Registration</a>
+                    <a href="about" class="btn btn-md m-1 ">About Us</a>
                 </li>
             </ul>
         </nav>

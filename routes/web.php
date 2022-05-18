@@ -2,12 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\login_con;
+use App\Http\Controllers\logout;
 use App\Http\Controllers\register_con;
 use App\Http\Controllers\display;
 use App\Http\Controllers\http_request;
 use GuzzleHttp\Middleware;
 use Illuminate\Routing\Route as RoutingRoute;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -23,21 +25,16 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 Route::get('/', function () {
     return view('home');
 });
+Route::view("home","home"); 
 Route::post("register",[register_con::class,"display"]);
 Route::view("register","register");
 Route::put("login_check",[login_con::class,"login_check"]);
-Route::view("login","login");
-Route::view("home","home"); 
+Route::view("login","login")->Middleware('login');
 Route::view("profile","profile");
+Route::view("about","about");
+Route::get("logout",[logout::class,"logout_check"]);
 
 
-
-Route::get("/logout",function (){
-    if (session()->has('user')) {
-        session()->pull('user');
-    }
-    redirect('profile');
-});
 
 
 #display table data using controller

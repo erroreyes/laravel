@@ -26,7 +26,7 @@
 </head>
 
 <body id="back">
-    @include("header")
+    @include('header')
     <div class=" p-5"></div>
     <div class="container w-50   p-2 " id="txt">
 
