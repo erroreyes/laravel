@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{asset('css/home.css')}}">
     <title>Document</title>
     <style>
         #txt {
@@ -27,7 +26,7 @@
     </style>
 </head>
 
-<body id="data"  class="bg-dark">
+<body class="bg-dark">
     @include("header")
     <!-- {{count($data)}} -->
     <div class="container w-100 w-75 w-50 w-25 ">
@@ -35,17 +34,28 @@
         <table class="table table-striped">
             <tr>
                 <th>Id</th>
-                <th>Name</th>
-                <th>Salary</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Gender</th>
+                <th>Date</th>
                 <th>Age</th>
+                <th>Salary</th>
+                <th>Department</th>
+                <th>Email</th>
+                <th>Checkbox</th>
             </tr>
-            @foreach($data as $info)
+            @foreach($dis as $info)
             <tr>
-                <td>{{$info->id}} </td>
-                <td>{{$info->email}}</td>
-                <td>{{$info->first_name}}</td>
-                <td>{{$info->last_name}} </td>
-                <td><img src="{{$info->avtar}}" alt="picture"></td>
+                <td>{{$info->id}}</td>
+                <td>{{$info->Firstname}} </td>
+                <td>{{$info->Lastname}}</td>
+                <td>{{$info->gender}}</td>
+                <td>{{$info->date}} </td>
+                <td>{{$info->age}} </td>
+                <td>{{$info->salary}} </td>
+                <td>{{$info->department}} </td>
+                <td>{{$info->email}} </td>
+                <td>{{$info->checkbox}} </td>
             </tr>
             @endforeach
         </table>

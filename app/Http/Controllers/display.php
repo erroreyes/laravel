@@ -9,8 +9,8 @@ use Illuminate\Support\Facades\DB as facadeDB;
 class display extends Controller
 {
     function tbl(){
-        $data=facadeDB::select("select * from emp");
-        return view("dashboard",["data"=>$data]);
-        // return admin::all();
+        $detail=facadeDB::select("select * from emp");
+        return view("apidata",["details"=>$detail]);
+        return admin::all();
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class register_con extends Controller
 {
@@ -10,8 +11,8 @@ class register_con extends Controller
     {
     
         $dis->validate([
-            'Firstname' => 'required | max:255', 
-            'Lastname' => 'required | max:255 ',
+            'Firstname' => 'required | max:255 | alpha', 
+            'Lastname' => 'required | max:255 | alpha',
             'gender'=>'required',
             'date'=>'required',
             'age'=>'required | numeric',
@@ -23,6 +24,18 @@ class register_con extends Controller
             'confirm'=>'required | same:passcode',
             'checkbox'=>'required'
             ]);
-         return $dis->input();
+        //  return $dis->input();
+            DB::table('employees')->insert([
+                "Firstname"=>$dis->input('Firstname'),
+                "Lastname"=>$dis->input('Lastname'),
+                "gender"=>$dis->input('gender'),
+                "date"=>$dis->input('date'),
+                "age"=>$dis->input('age'),
+                "salary"=>$dis->input('salary'),
+                "department"=>$dis->input('department'),
+                "email"=>$dis->input('email'),
+                "checkbox"=>$dis->input('checkbox'),
+            ]);
+        return redirect('dashboard');
     }
 }

@@ -33,19 +33,20 @@ Route::view("login","login")->Middleware('login');
 Route::view("profile","profile");
 Route::view("about","about");
 Route::get("logout",[logout::class,"logout_check"]);
+Route::view("dashboard","dashboard");
 
 
 
 
 #display table data using controller
 
-#Route::get("dashboard",[display::class,"tbl"]);
-Route::get("dashboard",[http_request::class,"check"]);
+#Route::get("apidata",[display::class,"tbl"]);
+Route::get("apidata",[http_request::class,"check"]);
 Route::view("gallary","gallary");
 
 #group middleware
 // Route::group(['middleware'=>['group']],function(){
-//     Route::view('home','files.dashboard');
+//     Route::view('home','home');
 //     Route::view('login','login');
 // });
 
