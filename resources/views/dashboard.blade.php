@@ -28,12 +28,11 @@
 
 <body class="bg-dark">
     @include("header")
-    <!-- {{count($data)}} -->
+    {{count($dis)}}
     <div class="container w-100 w-75 w-50 w-25 ">
        
         <table class="table table-striped">
             <tr>
-                <th>Id</th>
                 <th>Firstname</th>
                 <th>Lastname</th>
                 <th>Gender</th>
@@ -46,7 +45,6 @@
             </tr>
             @foreach($dis as $info)
             <tr>
-                <td>{{$info->id}}</td>
                 <td>{{$info->Firstname}} </td>
                 <td>{{$info->Lastname}}</td>
                 <td>{{$info->gender}}</td>

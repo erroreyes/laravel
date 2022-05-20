@@ -40,7 +40,7 @@ Route::view("dashboard","dashboard");
 
 #display table data using controller
 
-#Route::get("apidata",[display::class,"tbl"]);
+Route::get("dashboard",[display::class,"tbl"]);
 Route::get("apidata",[http_request::class,"check"]);
 Route::view("gallary","gallary");
 

@@ -18,7 +18,12 @@
 </head>
 <body class="bg-dark">
     @include('header')
-            <div class="slider-container">
+    <div class="row align-items-center">
+        <div class="col-6">
+            <h3 class="text-center text-white">our special dishes</h3>
+        </div>
+        <div class="col-6">
+            <div class="slider-container ">
                 <div class="image-container">
                     <img src="{{asset('images/food.jpg')}}"  ">
                     <img src="{{asset('images/food1.jpg')}}"  " >
@@ -28,6 +33,8 @@
                 </div>
                 <i class="fas fa-angle-double-left box prev"></i>
                 <i class="fas fa-angle-double-right box next"></i>
+            </div>
+            </div>
             </div>
     <script src="{{asset('javascript/image_slider.js')}}"></script>
 
