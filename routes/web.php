@@ -6,6 +6,7 @@ use App\Http\Controllers\logout;
 use App\Http\Controllers\register_con;
 use App\Http\Controllers\display;
 use App\Http\Controllers\http_request;
+use App\Http\Controllers\upload_file;
 use GuzzleHttp\Middleware;
 use Illuminate\Routing\Route as RoutingRoute;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
@@ -30,11 +31,13 @@ Route::post("register",[register_con::class,"display"]);
 Route::view("register","register");
 Route::put("login_check",[login_con::class,"login_check"]);
 Route::view("login","login")->Middleware('login');
-Route::view("profile","profile");
+Route::view("profile","profile")->middleware('logout');
 Route::view("about","about");
 Route::get("logout",[logout::class,"logout_check"]);
 Route::view("dashboard","dashboard");
-
+Route::post("imagefile",[upload_file::class,"imagefile"]);
+Route::view('uploadfile','uploadfile');
+Route::view("footer","footer");
 
 
 
