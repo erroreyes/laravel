@@ -34,10 +34,12 @@ Route::view("login","login")->Middleware('login');
 Route::view("profile","profile")->middleware('logout');
 Route::view("about","about");
 Route::get("logout",[logout::class,"logout_check"]);
-Route::view("dashboard","dashboard");
+Route::view("dashboard","dashboard")->middleware('admin_logout');
 Route::post("imagefile",[upload_file::class,"imagefile"]);
 Route::view('uploadfile','uploadfile');
 Route::view("footer","footer");
+Route::view("menu","menu");
+Route::view("success","success");
 
 
 

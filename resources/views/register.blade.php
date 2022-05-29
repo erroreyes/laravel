@@ -19,6 +19,9 @@
         transition: all 0.6s;
         color: black;
     }
+    .nav-item a{
+        color: white;
+    }
 
     .container {
         background-color: rgba(0, 0, 0, 0.6);
@@ -92,7 +95,7 @@
                     <span class="text-white">@error('department'){{$message}} @enderror</span>
                 </div>
 
-                <div class="form-group col-md-4">
+                <!-- <div class="form-group col-md-4">
                     <label>Image :</label>
                     <div class="custom-file">
 
@@ -100,7 +103,7 @@
                         <label class="custom-file-label" id="customfile">choose image file</label>
                     </div>
                     <span class="text-white">@error('Imagefile'){{$message}} @enderror</span>
-                </div>
+                </div> -->
 
             </div>
             <div class="form-row">
@@ -126,10 +129,10 @@
                     <label>Hobby:</label>
                 </div>
                 <div class="form-group col-md-6">
-                    <input class="form-check-input" type="checkbox" name="checkbox" value="football"> Football <br>
-                    <input class="form-check-input" type="checkbox" name="checkbox" value="Cricket"> Cricket <br>
-                    <input class="form-check-input" type="checkbox" name="checkbox" value="Dancing"> Dancing <br>
-                    <input class="form-check-input" type="checkbox" name="checkbox" value="Singing"> Singing <br>
+                    <input class="form-check-input" type="checkbox" name="checkbox" value="football" @if ("checkbox"=="football") selected @endif> Football <br>
+                    <input class="form-check-input" type="checkbox" name="checkbox" value="Cricket" @if ("checkbox"=="Cricket") selected @endif> Cricket <br>
+                    <input class="form-check-input" type="checkbox" name="checkbox" value="Dancing" @if ("checkbox"=="Dancing") selected @endif> Dancing <br>
+                    <input class="form-check-input" type="checkbox" name="checkbox" value="Singing" @if ("checkbox"=="Singing") selected @endif> Singing <br>
                     <span class="text-white">@error('checkbox'){{$message}} @enderror</span>
                 </div>
                 <div class="form-group col-md-4  "><br><br>

@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
-class logout
+class admin_logout
 {
     /**
      * Handle an incoming request.
@@ -15,11 +15,10 @@ class logout
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
     public function handle(Request $request, Closure $next)
-    {   if (!session()->has('user')) {
-        return redirect('login');
-    } 
-    
-    
+    {
+        if (!session()->has('admin')) {
+            return redirect('login');
+        }
         return $next($request);
     }
 }

@@ -21,6 +21,9 @@
             background-color:rgba(0, 0, 0, 0.6);
             border: 1px solid black;
         }
+        .nav-item a{
+        color: white;
+    }
 
     </style>
 </head>

@@ -6,23 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{asset('css/home.css')}}">
     <title>Document</title>
+
 </head>
 
-<body style="background-color:black;">
-    <div class="container text-white">
+<body>
+    <div class="container-fluid bg-dark text-white back-img p-5">
         <div class="p-4"></div>
         <div class="row p-3 text-center">
             <div class="col-4">
                 <img src="{{asset('images/logo.png')}}" alt="logo" width="140px" height="50px">
 
             </div>
-            <div class="col-4">
+            <div class="col-4 text-warning">
                 <h5>Useful Links</h5>
 
             </div>
-            <div class="col-4">
-                <h5>Subscribe</h5>
+            <div class="col-4 text-warning">
+                <h5>Opening Hours</h5>
 
             </div>
         </div>
@@ -37,14 +39,14 @@
             </div>
             <div class="col-4 text-center">
                 <div>
-                    <p> <a href="">Menu</a></p>
-                    <p> <a href="">About</a></p>
-                    <p><a href="">Contact</a></p>
+                    <p> <a href="" style="color: white;">Menu</a></p>
+                    <p> <a href="" style="color: white;">About</a></p>
+                    <p><a href="" style="color: white;">Contact</a></p>
                 </div>
             </div>
             <div class="col-4 text-center">
-                <input type="email" name="email" class="m-2 text-center" placeholder="Enter Mail">
-                <input type="submit" class="btn btn-sm btn-warning m-2" value="submit">
+                <p> Monday to Sunday</p>
+                <p> 9:00 AM - 10:00 PM</p>
 
             </div>
         </div>

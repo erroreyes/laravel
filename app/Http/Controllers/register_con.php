@@ -36,6 +36,6 @@ class register_con extends Controller
                 "email"=>$dis->input('email'),
                 "checkbox"=>$dis->input('checkbox'),
             ]);
-        return redirect('dashboard');
+        return redirect('login');
     }
 }

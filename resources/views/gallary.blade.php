@@ -13,7 +13,9 @@
             background-color:orange;
             transition: all 0.6s;
         }
-      
+        .nav-item a{
+            color: white;
+        }
     </style>
 </head>
 <body class="bg-dark">
@@ -25,17 +27,18 @@
         <div class="col-6">
             <div class="slider-container ">
                 <div class="image-container">
-                    <img src="{{asset('images/food.jpg')}}"  ">
-                    <img src="{{asset('images/food1.jpg')}}"  " >
-                    <img src="{{asset('images/food2.jpg')}}"  ">
-                    <img src="{{asset('images/food3.jpg')}}"  ">
-                    <img src="{{asset('images/food4.jpg')}}"  "> 
+                    <img src="{{asset('images/food.jpg')}}" >
+                    <img src="{{asset('images/food1.jpg')}}"  >
+                    <img src="{{asset('images/food2.jpg')}}" >
+                    <img src="{{asset('images/food3.jpg')}}" > 
+                    <img src="{{asset('images/food4.jpg')}}" > 
                 </div>
                 <i class="fas fa-angle-double-left box prev"></i>
                 <i class="fas fa-angle-double-right box next"></i>
             </div>
             </div>
             </div>
+            @include('footer')
     <script src="{{asset('javascript/image_slider.js')}}"></script>
 
 </body>
