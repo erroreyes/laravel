@@ -14,16 +14,16 @@
 <body>
     <div class="container-fluid bg-dark text-white back-img p-5">
         <div class="p-4"></div>
-        <div class="row p-3 text-center">
-            <div class="col-4">
+        <div class="row p-3">
+            <div class="col-4  text-center">
                 <img src="{{asset('images/logo.png')}}" alt="logo" width="140px" height="50px">
 
             </div>
-            <div class="col-4 text-warning">
+            <div class="col-4 text-warning text-center">
                 <h5>Useful Links</h5>
 
             </div>
-            <div class="col-4 text-warning">
+            <div class="col-4 text-warning text-center">
                 <h5>Opening Hours</h5>
 
             </div>
@@ -45,9 +45,10 @@
                 </div>
             </div>
             <div class="col-4 text-center">
-                <p> Monday to Sunday</p>
-                <p> 9:00 AM - 10:00 PM</p>
-
+            <div>
+                <p> Monday to Satuarday :  9:00 AM - 10:00 PM</p>
+                <p> Sunday  :  9:00 AM - 6:00 PM</p>
+            </div>
             </div>
         </div>
     </div>

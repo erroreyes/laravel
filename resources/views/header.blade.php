@@ -26,7 +26,6 @@
             <ul class="nav justify-content-end">
                 <li class="nav-item" id="txt_color"> <a href="home" class="btn  btn-md " id="first">Home</a> </li>
                 <li class="nav-item"> <a href="gallary" class="btn btn-m">Gallary</a></li>
-                <li class="nav-item"><a href="menu" class="btn btn-md">Menu</a></li>
                 <li class="nav-item"><a href="profile" class="btn btn-md">Profile</a></li>
                 <li class="nav-item"> <a href="login" class="btn btn-md">Login</a></li>
                 <li class="nav-item"><a href="register" class="btn btn-md">Registration</a></li>
