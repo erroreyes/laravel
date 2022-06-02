@@ -19,7 +19,8 @@
         transition: all 0.6s;
         color: black;
     }
-    .nav-item a{
+
+    .nav-item a {
         color: white;
     }
 
@@ -77,7 +78,7 @@
 
 
             </div>
-            <div class="form-row">
+            <!-- <div class="form-row">
                 <div class="form-group col-md-4">
                     <label>Salary :</label>
                     <input type="text" name="salary" class="form-control" value="{{old('salary')}}">
@@ -93,20 +94,40 @@
                         <option value="marketing">Marketing</option>
                     </select>
                     <span class="text-white">@error('department'){{$message}} @enderror</span>
-                </div>
-
-                <!-- <div class="form-group col-md-4">
-                    <label>Image :</label>
-                    <div class="custom-file">
-
-                        <input type="file" id="customfile" class="custom-file-input" name="Imagefile" value="{{old('Imagefile')}}">
-                        <label class="custom-file-label" id="customfile">choose image file</label>
-                    </div>
-                    <span class="text-white">@error('Imagefile'){{$message}} @enderror</span>
                 </div> -->
+            <div class="form-row justify-content-center">
 
+                <div class="form-group col-6">
+                    <label>Imagefile :</label>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="customfile" name="imagefile">
+                        <label class="custom-file-label" id="customfile">Choose image file</label>
+                    </div>
+                </div>
+                <div class="form-group col-6">
+                    <label>File Name</label>
+                    <select name="file_name" class="form-control">
+                        <option value="" selected disabled>--- Select File name ---</option>
+                        <option value="random">Random Name</option>
+                        <option value="original">Original Name</option>
+                    </select>
+                </div>
             </div>
             <div class="form-row">
+                <label>Folder Name :</label>
+            </div>
+            <div class="form-row">
+                <div class="input-group col-md-9">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input type="checkbox" name="check" id="checkbox">
+                            <!-- <label>Click Here if you want to add Folder Name</label> -->
+                        </div>
+                    </div>
+                    <input type="text" name="folder_name" class="form-control" id="foldername" disabled>
+                </div>
+            </div>
+            <div class="form-row p-3">
                 <div class="form-group col-md-6">
                     <label>Email :</label>
                     <input type="text" name="email" class="form-control" value="{{old('email')}}">
@@ -126,13 +147,13 @@
             </div>
             <div class="form-row">
                 <div class="form-group col-md-2 ">
-                    <label>Hobby:</label>
+                    <label>Favourite Drinks:</label>
                 </div>
                 <div class="form-group col-md-6">
-                    <input class="form-check-input" type="checkbox" name="checkbox" value="football" @if ("checkbox"=="football") selected @endif> Football <br>
-                    <input class="form-check-input" type="checkbox" name="checkbox" value="Cricket" @if ("checkbox"=="Cricket") selected @endif> Cricket <br>
-                    <input class="form-check-input" type="checkbox" name="checkbox" value="Dancing" @if ("checkbox"=="Dancing") selected @endif> Dancing <br>
-                    <input class="form-check-input" type="checkbox" name="checkbox" value="Singing" @if ("checkbox"=="Singing") selected @endif> Singing <br>
+                    <input class="form-check-input" type="checkbox" name="checkbox" value="Hot Chocolate" @if ("checkbox"=="football" ) selected @endif> Hot Chocolate <br>
+                    <input class="form-check-input" type="checkbox" name="checkbox" value="Orange Juice" @if ("checkbox"=="Cricket" ) selected @endif> Orange Juice <br>
+                    <input class="form-check-input" type="checkbox" name="checkbox" value="Apple Juice" @if ("checkbox"=="Dancing" ) selected @endif> Apple Juice <br>
+                    <input class="form-check-input" type="checkbox" name="checkbox" value="Soft Drinks" @if ("checkbox"=="Singing" ) selected @endif> Soft Drinks <br>
                     <span class="text-white">@error('checkbox'){{$message}} @enderror</span>
                 </div>
                 <div class="form-group col-md-4  "><br><br>
@@ -145,9 +166,14 @@
             <br>
         </form>
     </div>
-</body>
-
-</html>
+    <script>
+        const folderName = document.getElementById('foldername');
+        const checkbox = document.getElementById('checkbox');
+     
+        const click= checkbox.addEventListener('click', () => {
+            folderName.disabled = false;
+        });
+    </script>
 </body>
 
 </html>

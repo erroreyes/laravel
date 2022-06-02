@@ -1,6 +1,6 @@
 const nextE1 = document.querySelector(".next");
 const imageContainerE1 = document.querySelector(".image-container");
-const imgE1 = document.querySelectorAll("img");
+const imgE1 = document.getElementsByClassName("images");
 // console.log(imgE1);
 const prevE1 = document.querySelector(".prev");
 
@@ -24,8 +24,8 @@ function uploadImg() {
     else if (currentImg < 1) {
         currentImg = imgE1.length;
     }
-    imageContainerE1.style.transform = `translateX(-${(currentImg - 1) * 550}px)`;
-    timeOut = setTimeout(() => {
+    imageContainerE1.style.transform = `translateX(-${(currentImg - 1) * 550}px)`;        
+        timeOut = setTimeout(() => {
         currentImg++;
         uploadImg();
     }, 3000);

@@ -20,8 +20,7 @@ class CreateEmployeesTable extends Migration
             $table->string('gender');
             $table->date('date');
             $table->integer('age');
-            $table->integer('salary');
-            $table->string('department');
+            $table->string('imagefile');
             $table->string('email');
             $table->string('checkbox');
             $table->timestamps();

@@ -52,8 +52,7 @@
                     <th>Gender</th>
                     <th>Date</th>
                     <th>Age</th>
-                    <th>Salary</th>
-                    <th>Department</th>
+                    <th>Image</th>
                     <th>Email</th>
                     <th>Checkbox</th>
                 </tr>
@@ -64,8 +63,7 @@
                     <td>{{$info->gender}}</td>
                     <td>{{$info->date}} </td>
                     <td>{{$info->age}} </td>
-                    <td>{{$info->salary}} </td>
-                    <td>{{$info->department}} </td>
+                    <td><img src="{{$info->imagefile}}" alt="" width="100px" height="100px"> </td>
                     <td>{{$info->email}} </td>
                     <td>{{$info->checkbox}} </td>
                 </tr>
